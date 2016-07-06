@@ -48,7 +48,7 @@ header{
 }
 
 @media screen and (max-width: 767px){
-	
+
 	.container-fluid{
 		padding-right: 15px;
 	}
@@ -110,7 +110,7 @@ header{
 /**************************INTRO PAGE**************************/
 
 #intro-page{
-	background: url(../img/bg.jpg) no-repeat center; 
+	background: url(../img/bg.jpg) no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -242,8 +242,8 @@ header{
 	display: inline-block;
 	width: 15px;
 	height: 15px;
-	-moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
+	-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
     float: left;
     margin: auto 3px;
@@ -519,6 +519,27 @@ header{
 	border-radius: 5px 5px 0 0;
 	background-color: #70ccc0;
 }
+#project-misn{
+	background-color: #a50e06;
+}
+#project-kcj{
+	background-color: #ff8939;
+}
+#project-kwiz{
+	background-color: #2196F3;
+}
+#project-murou{
+	background-color: #ab47bc;
+}
+#project-lrc{
+	background-color: #76b202;
+}
+#project-walksafe{
+	background-color: #282727;
+}
+#project-roumi{
+	background-color: #EF6C00;
+}
 .center-portfolio-image{
 	display: inline-block;
     height: 100%;
@@ -715,7 +736,7 @@ header{
 	}
 	.timeline-right{
 		width: calc(100% - 120px - 50px);
-		padding-right: 50px; 
+		padding-right: 50px;
 		max-width: inherit;
 	}
 	.timeline-right *{
