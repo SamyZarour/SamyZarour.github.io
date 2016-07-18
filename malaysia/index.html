@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Angular input dropdown demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.10/angular.min.js"></script>
+  <script src="inputDropdown.js"></script>
+</head>
+
+<body ng-app="inputDropdownDemo">
+  <div class="content" ng-controller="InputDropdownController as dropdownCtrl">
+
+    <form name="demoFormObjects" ng-submit="dropdownCtrl.submitFormObjects()" novalidate="">
+      <input-dropdown input-placeholder="Enter your address here" input-name="country-object" input-required="true" selected-item="dropdownCtrl.countryObject" default-dropdown-items="dropdownCtrl.defaultDropdownObjects" filter-list-method="dropdownCtrl.filterObjectList(userInput)"
+      item-selected-method="dropdownCtrl.itemObjectSelected(item)"></input-dropdown>
+    </form>
+    <br><br>
+    <p>{{dropdownCtrl.objectMessage}}</p>
+  </div>
+  <!-- Start of LiveChat (www.livechatinc.com) code -->
+  <script type="text/javascript">
+  window.__lc = window.__lc || {};
+  window.__lc.license = 7929781;
+  (function() {
+    var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+    lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+  })();
+  </script>
+  <!-- End of LiveChat code -->
+
+</body>
+
+</html>
