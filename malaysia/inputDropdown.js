@@ -1,4 +1,4 @@
-angular.module('inputDropdown', []).directive('inputDropdown', [function() {
+angular.module('ui.bootstrap.demo', []).directive('ui.bootstrap.demo', [function() {
   var templateString =
   '<div class="input-dropdown">' +
     '<input type="text"' +
@@ -178,9 +178,9 @@ angular.module('inputDropdown', []).directive('inputDropdown', [function() {
   }
 }]);
 
-angular.module('inputDropdown').directive('inputDropdownValidator', function() {
+angular.module('ui.bootstrap.demo').directive('inputDropdownValidator', function() {
   return {
-    require: ['^inputDropdown', 'ngModel'],
+    require: ['^ui.bootstrap.demo', 'ngModel'],
     restrict: 'A',
     scope: {},
     link: function(scope, element, attrs, ctrls) {
@@ -202,7 +202,7 @@ angular.module('inputDropdown').directive('inputDropdownValidator', function() {
 });
 
 // Add 'inputDropdown' as a dependency when creating angular app
-var demoApp = angular.module('inputDropdownDemo', ['inputDropdown']);
+var demoApp = angular.module('inputDropdownDemo', ['ui.bootstrap.demo']);
 
 demoApp.controller('InputDropdownController', [
   '$scope',

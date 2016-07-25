@@ -354,9 +354,6 @@ header{
     cursor: pointer;
 }
 
-.skill-details {
-    text-align: center;
-}
 
 .skill-level {
     color: rgb(114, 120, 120);
@@ -364,10 +361,11 @@ header{
     margin-bottom: 20px;
 }
 
-.skill-also {
-    line-height: 30px;
-    font-size: 20px;
-    margin: 5%;
+.skill-title{
+	color: #FFF;
+	font-size: 30px;
+	font-style: bold;
+	margin-bottom: 10px;
 }
 
 #icon01 {
@@ -470,6 +468,8 @@ header{
 .mac-screen{
 	position: absolute;
 	display: table;
+	height: 100%;
+	width: 100%;
 	opacity: 0;
 	top: 8%;
 	left: 5%;
