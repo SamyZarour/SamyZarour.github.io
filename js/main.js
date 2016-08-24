@@ -1,30 +1,25 @@
-var allowed = false;
-var iconSize = 41;
-var squareSize = 0;
-var shiftIcon = 0;
-var iconNumber = 9;
-var pieSlice = 360/iconNumber;
+var circularized = false;
 var first = true;
-
 var didScroll=false;
+
+var ICON_NUMBER = 9;
+var PIE_SLICE = 360/ICON_NUMBER;
+
 var lastScrollTop = 0;
 var delta = 5;
 var greenColor = "#70ccc0";
-var first = true;
 
+var lastScrollTop;
 var lastId;
-var topMenu;
-var topMenuHeight;
-        // All list items
+
 var menuItems;
 var scrollItems;
 
 $(document).ready(function() {
     setupTab();
-    setMacIconSize();
-	circularize();
+    var sizes = setMacIconSize();
+	circularize(sizes[0], sizes[1]);
     infoOnHover();
-    // setTab();
     lastScrollTop = $(this).scrollTop();
     if(lastScrollTop > 0){
         $('header').addClass('nav-up');
@@ -34,50 +29,52 @@ $(document).ready(function() {
 // SKILLS
 
 function setMacIconSize(){
+
     squareSize = $('.square').width();
     iconSize = squareSize*0.1;
+
     $('.skill-icon').css('top','calc(50% - ' + iconSize/2 + 'px)');
     $('.skill-icon').css('left','calc(50% - ' + iconSize/2 + 'px)');
     $('.skill-icon').children('img').css('height',iconSize+'px');
     $('.square').css('margin',3*iconSize+'px 25%');
+
+    return [squareSize, iconSize];
 }
 
-function circularize() {
+function circularize(squareSize, iconSize) {
     if(first){
-        animateIcons();
+        animateIcons(squareSize, iconSize);
         first = false;
     }
     $(window).scroll(function(event) {
-        animateIcons();
+        animateIcons(squareSize, iconSize);
     });
 }
 
-function animateIcons() {
+function animateIcons(squareSize, iconSize) {
     var macPosition = $('.square').offset().top + $('.square').height()/2;
     shiftIcon = squareSize*0.5 + iconSize*1.5;
-    // console.log("Lower bound: " + $(window).scrollTop());
-    // console.log("Upper bound: " + ($(window).scrollTop() + $(window).height()));
-    // console.log("Current position: " + macPosition + "\n");
     if (!$('.skill-icon').hasClass('circularized') && $(window).scrollTop()+$(window).height() > macPosition && $(window).scrollTop() < macPosition) {
         $('.skill-icon').each(function(index, el) {
             var ID = "icon" + "0" + (index + 1);
             $(this).attr('id', ID);
-            $('#'+ID).css("-moz-transform","rotate(" + (index*pieSlice) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*pieSlice) + "deg)");
-            $('#'+ID).css("-ms-transform","rotate(" + (index*pieSlice) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*pieSlice) + "deg)");
-            $('#'+ID).css("-o-transform","rotate(" + (index*pieSlice) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*pieSlice) + "deg)");
-            $('#'+ID).css("-webkit-transform","rotate(" + (index*pieSlice) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*pieSlice) + "deg)");
+            $('#'+ID).css("-moz-transform","rotate(" + (index*PIE_SLICE) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*PIE_SLICE) + "deg)");
+            $('#'+ID).css("-ms-transform","rotate(" + (index*PIE_SLICE) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*PIE_SLICE) + "deg)");
+            $('#'+ID).css("-o-transform","rotate(" + (index*PIE_SLICE) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*PIE_SLICE) + "deg)");
+            $('#'+ID).css("-webkit-transform","rotate(" + (index*PIE_SLICE) + "deg) translate("+ shiftIcon + "px) rotate(-" + (index*PIE_SLICE) + "deg)");
         });
+        // what is setTimeOut and what is this even doing actually. Once animation is done it turns on the descr
         setTimeout(function() {
             $('.skill-icon').addClass('circularized');
             $('#info00').css('opacity', '1');
-            allowed = true;
+            circularized = true;
         }, 1500);
     }
 }
 
 function infoOnHover() {
     $('.skill-icon').hover(function() {
-        if (!allowed) {
+        if (!circularized) {
             return false;
         }
         $('.skill-icon').not(this).css('opacity', '0.6');
@@ -85,7 +82,7 @@ function infoOnHover() {
         $("#info00").css('opacity', 0);
         $(infoID).css('opacity', 1);
     }, function() {
-        if (!allowed) {
+        if (!circularized) {
             return false;
         }
         $('.skill-icon').not(this).css('opacity', '1');
@@ -95,7 +92,8 @@ function infoOnHover() {
     });
 
     $('.skill-icon').click(function(){
-        if (!allowed) {
+        console.log("printed");
+        if (!circularized) {
             return false;
         }
         $(this).css('opacity', '1');
@@ -142,9 +140,9 @@ $(window).scroll(function(event){
     didScroll = true;
     setTab();
 });
+
 function setupTab(){
     topMenu = $(".navbar-nav");
-    topMenuHeight = topMenu.outerHeight();
     menuItems = topMenu.find("a");
     scrollItems = menuItems.map(function(){
       var item = $($(this).attr("href"));
@@ -156,13 +154,15 @@ function setupTab(){
 function setTab(){
     var fromTop = $(this).scrollTop();
     var cur = scrollItems.map(function(){
-     if ($(this).offset().top <= fromTop)
-       return this;
+        if ($(this).offset().top <= fromTop + 30) return this;
     });
-    cur = cur[cur.length-1];
-    var id = ($('#contact-page').offset().top < fromTop + $(this).height()) ? scrollItems[scrollItems.length-1][0].id : cur[0].id;
-    if (lastId !== id) {
-       lastId = id;
-       menuItems.filter("[href='#"+id+"']").focus();
-    }  
+    console.log(cur.length);
+    curId = cur.length;
+    if(curId == 0 || $('#contact-page').offset().top < fromTop + $(this).height()) menuItems[curId].focus();
+    else menuItems[curId-1].focus();
+    // if(cur.length>0){
+    //     curId = cur[cur.length-1];
+    //     var id = ($('#contact-page').offset().top < fromTop + $(this).height()) ? scrollItems[scrollItems.length-1][0].id : curId.id;
+    //     menuItems[0].focus();
+    // }
 }
