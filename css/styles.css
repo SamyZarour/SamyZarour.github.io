@@ -1,6 +1,14 @@
 .navbar {
   padding: 0; }
 
+hr.divider-line {
+  max-width: 250px;
+  margin: 10px auto 15px;
+  padding: 0;
+  text-align: center;
+  border: none;
+  border-top: solid 3px; }
+
 #mainNav {
   font-weight: 300;
   text-transform: uppercase;
@@ -54,14 +62,63 @@
 #intro-page {
   min-height: 100vh;
   background-color: #2C3E50; }
+  #intro-page .intro-content {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translate(0, -50%);
+    font-size: 50px;
+    color: white; }
+    #intro-page .intro-content .name {
+      font-size: 1em;
+      font-weight: 300;
+      letter-spacing: 3px;
+      text-transform: uppercase; }
+    #intro-page .intro-content .roles {
+      font-size: 0.6em;
+      font-weight: 100; }
+    #intro-page .intro-content .social-media .fa {
+      font-size: 2em;
+      color: #FFF;
+      font-weight: bold; }
+    #intro-page .intro-content .social-media .btn {
+      border: 2px solid #fff;
+      border-radius: 50%;
+      padding: 20px;
+      width: 76px;
+      height: 76px;
+      margin: 30px 10px 10px 10px; }
+    #intro-page .intro-content .social-media .btn:hover {
+      background-color: white;
+      transition: transform 0.4s ease-out;
+      transform: rotateZ(360deg); }
+    #intro-page .intro-content .social-media .btn:hover .fa-linkedin {
+      color: #007BB5; }
+    #intro-page .intro-content .social-media .btn:hover .fa-github {
+      color: #000000; }
+    #intro-page .intro-content .social-media .btn:hover .fa-envelope {
+      color: #DD4B39; }
+    #intro-page .intro-content .cv-button .btn {
+      border: 2px solid #fff;
+      font-size: 0.5em; }
+    #intro-page .intro-content .cv-button .btn:hover {
+      background-color: #fff;
+      color: #2C3E50; }
 
 #about-page {
+  min-height: 100vh; }
+
+#skills-page {
   min-height: 100vh; }
 
 #projects-page {
   min-height: 100vh; }
 
 #timeline-page {
+  min-height: 100vh; }
+
+#contact-page {
   min-height: 100vh; }
 
 /*# sourceMappingURL=styles.css.map */

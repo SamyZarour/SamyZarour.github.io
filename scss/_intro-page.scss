@@ -1,4 +1,73 @@
 #intro-page{
 	min-height: 100vh;
 	background-color: $theme-primary;
+
+	.intro-content {
+
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		transform: translate(0, -50%);
+		font-size: 50px;
+		color: white;
+
+		.name {
+			font-size: 1em;
+			font-weight: 300;
+			letter-spacing: 3px;
+
+			text-transform: uppercase;
+		}
+		.roles {
+			font-size: 0.6em;
+			font-weight: 100;
+		}
+
+		.social-media{
+			.fa{
+				font-size: 2em;
+				color: #FFF;
+				font-weight: bold;
+			}
+
+			.btn{
+				border: 2px solid #fff;
+				border-radius: 50%;
+			    padding: 20px;
+			    width: 76px;
+			    height: 76px;
+			    margin: 30px 10px 10px 10px;
+			}
+			.btn:hover{
+				background-color: white;
+				transition: transform 0.4s ease-out;
+			    transform: rotateZ(360deg);
+			}
+			.btn:hover .fa-linkedin{
+				color: $linkedin-blue;
+			}
+
+			.btn:hover .fa-github{
+				color: $github-black;
+			}
+
+			.btn:hover .fa-envelope{
+				color: $gmail-red;
+			}
+		}
+
+		.cv-button{
+
+			.btn{
+				border: 2px solid #fff;
+				font-size: 0.5em;
+			}
+
+			.btn:hover{
+				background-color: #fff;
+				color: $theme-primary;
+			}
+		}
+	}
 }
