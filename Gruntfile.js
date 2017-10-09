@@ -93,7 +93,9 @@ module.exports = function(grunt) {
           main: {
             files: [
                 {expand: true, cwd: 'node_modules/bootstrap/dist/', src: ['**/*.min.*', '!**/bootstrap-theme.*', '!**/*.map'], dest: 'vendor/bootstrap/', filter: 'isFile'},
-                {expand: true, cwd: 'node_modules/jquery/dist/', src: ['jquery.min.js'], dest: 'vendor/jquery/', filter: 'isFile'}
+                {expand: true, cwd: 'node_modules/jquery/dist/', src: ['jquery.min.js'], dest: 'vendor/jquery/', filter: 'isFile'},
+                {expand: true, cwd: 'node_modules/font-awesome/', src: ['*/font-awesome.min.css', '**/*.ttf', 'fonts/*'], dest: 'vendor/font-awesome/', filter: 'isFile'},
+                {expand: true, cwd: 'node_modules/popper.js/dist/', src: ['popper.min.js'], dest: 'vendor/popper/', filter: 'isFile'}
 
             ],
           },
