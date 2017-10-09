@@ -1,3 +1,67 @@
+.navbar {
+  padding: 0; }
 
+#mainNav {
+  font-weight: 300;
+  text-transform: uppercase;
+  background: #2C3E50; }
+  #mainNav .last-name {
+    color: #18BC9C; }
+  #mainNav .navbar-brand {
+    font-size: 1.1rem;
+    color: white; }
+    #mainNav .navbar-brand.active, #mainNav .navbar-brand:active, #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+      color: white; }
+  #mainNav .navbar-nav {
+    letter-spacing: 1px; }
+    #mainNav .navbar-nav li.nav-item a.nav-link {
+      padding: 20px;
+      color: white; }
+      #mainNav .navbar-nav li.nav-item a.nav-link:hover {
+        background-color: #18BC9C;
+        outline: none; }
+      #mainNav .navbar-nav li.nav-item a.nav-link:active, #mainNav .navbar-nav li.nav-item a.nav-link:focus {
+        color: white; }
+  #mainNav .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    margin: 11px 0;
+    text-transform: uppercase;
+    color: white;
+    border-color: white; }
+    #mainNav .navbar-toggler:focus, #mainNav .navbar-toggler:hover {
+      color: white;
+      border-color: #18BC9C;
+      background-color: #18BC9C; }
+
+@media (min-width: 992px) {
+  #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s; }
+    #mainNav .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s; }
+    #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      border-radius: 3px;
+      background: #18BC9C; }
+      #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+        color: white;
+        background: #18BC9C; } }
+#intro-page {
+  min-height: 100vh;
+  background-color: #2C3E50; }
+
+#about-page {
+  min-height: 100vh; }
+
+#projects-page {
+  min-height: 100vh; }
+
+#timeline-page {
+  min-height: 100vh; }
 
 /*# sourceMappingURL=styles.css.map */

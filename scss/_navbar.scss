@@ -1,0 +1,75 @@
+// Styling for the navbar
+
+#mainNav {
+  font-weight: 300;
+  text-transform: uppercase;
+  background: $theme-primary;
+  .last-name{
+    color: $theme-success;
+  }
+  .navbar-brand {
+    font-size: 1.1rem;
+    color: white;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: white;
+    }
+  }
+  .navbar-nav {
+    letter-spacing: 1px;
+    li.nav-item {
+      a.nav-link {
+        padding: 20px;
+        color: white;
+        &:hover {
+          background-color: $theme-success;
+          outline: none;
+        }
+        &:active,
+        &:focus {
+          color: white;
+        }
+      }
+    }
+  }
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    margin: 11px 0;
+    text-transform: uppercase;
+    color: white;
+    border-color: white;
+    &:focus,
+    &:hover {
+      color: white;
+      border-color: $theme-success;
+      background-color: $theme-success;
+    }
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    .navbar-brand {
+      font-size: 2em;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      border-radius: 3px;
+      background: $theme-success;
+      &:active,
+      &:focus,
+      &:hover {
+        color: white;
+        background: $theme-success;
+      }
+    }
+  }
+}
