@@ -1,3 +1,10 @@
+.section{
+	min-height: 100vh;
+	width: 100%;
+	text-align: center;
+	padding-top: 70px;
+}
+
 hr.divider-line {
   max-width: 250px;
   margin: 10px auto 15px;
@@ -5,4 +12,18 @@ hr.divider-line {
   text-align: center;
   border: none;
   border-top: solid 3px;
+}
+
+.title {
+	font-size: 3em;
+	font-weight: 300;
+	letter-spacing: 3px;
+
+	text-transform: uppercase;
+}
+
+.title-desc{
+	font-size: 2em;
+	font-style: italic;
+	font-weight: 100;
 }

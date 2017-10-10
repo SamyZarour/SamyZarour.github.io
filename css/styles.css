@@ -1,6 +1,12 @@
 .navbar {
   padding: 0; }
 
+.section {
+  min-height: 100vh;
+  width: 100%;
+  text-align: center;
+  padding-top: 70px; }
+
 hr.divider-line {
   max-width: 250px;
   margin: 10px auto 15px;
@@ -8,6 +14,17 @@ hr.divider-line {
   text-align: center;
   border: none;
   border-top: solid 3px; }
+
+.title {
+  font-size: 3em;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: uppercase; }
+
+.title-desc {
+  font-size: 2em;
+  font-style: italic;
+  font-weight: 100; }
 
 #mainNav {
   font-weight: 300;
@@ -60,54 +77,93 @@ hr.divider-line {
         color: white;
         background: #18BC9C; } }
 #intro-page {
-  min-height: 100vh;
   background-color: #2C3E50; }
-  #intro-page .intro-content {
+  #intro-page .content {
     position: absolute;
     top: 50%;
     width: 100%;
-    text-align: center;
     transform: translate(0, -50%);
-    font-size: 50px;
     color: white; }
-    #intro-page .intro-content .name {
-      font-size: 1em;
-      font-weight: 300;
-      letter-spacing: 3px;
-      text-transform: uppercase; }
-    #intro-page .intro-content .roles {
-      font-size: 0.6em;
+    #intro-page .content .roles {
+      font-size: 1.8em;
       font-weight: 100; }
-    #intro-page .intro-content .social-media .fa {
+    #intro-page .content .social-media .fa {
       font-size: 2em;
       color: #FFF;
       font-weight: bold; }
-    #intro-page .intro-content .social-media .btn {
+    #intro-page .content .social-media .btn {
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 20px;
       width: 76px;
       height: 76px;
-      margin: 30px 10px 10px 10px; }
-    #intro-page .intro-content .social-media .btn:hover {
+      margin: 30px 10px 20px 10px; }
+    #intro-page .content .social-media .btn:hover {
       background-color: white;
       transition: transform 0.4s ease-out;
       transform: rotateZ(360deg); }
-    #intro-page .intro-content .social-media .btn:hover .fa-linkedin {
+    #intro-page .content .social-media .btn:hover .fa-linkedin {
       color: #007BB5; }
-    #intro-page .intro-content .social-media .btn:hover .fa-github {
+    #intro-page .content .social-media .btn:hover .fa-github {
       color: #000000; }
-    #intro-page .intro-content .social-media .btn:hover .fa-envelope {
+    #intro-page .content .social-media .btn:hover .fa-envelope {
       color: #DD4B39; }
-    #intro-page .intro-content .cv-button .btn {
+    #intro-page .content .cv-button {
       border: 2px solid #fff;
-      font-size: 0.5em; }
-    #intro-page .intro-content .cv-button .btn:hover {
-      background-color: #fff;
-      color: #2C3E50; }
+      font-size: 1.5em;
+      cursor: pointer; }
+      #intro-page .content .cv-button:hover {
+        background-color: #fff;
+        color: #2C3E50; }
 
-#about-page {
-  min-height: 100vh; }
+#about-page .text-editor {
+  width: 500px;
+  margin: 100px auto;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5); }
+  #about-page .text-editor .text-editor-top {
+    position: relative;
+    background-color: #CCC;
+    padding: 5px;
+    border-radius: 5px 5px 0 0; }
+    #about-page .text-editor .text-editor-top .buttons {
+      position: absolute;
+      top: 10px;
+      left: 5px; }
+    #about-page .text-editor .text-editor-top #button1, #about-page .text-editor .text-editor-top #button2, #about-page .text-editor .text-editor-top #button3 {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 50%;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      float: left;
+      margin: auto 3px;
+      vertical-align: middle; }
+    #about-page .text-editor .text-editor-top #button1 {
+      background-color: #E53935; }
+    #about-page .text-editor .text-editor-top #button2 {
+      background-color: #FF8F00; }
+    #about-page .text-editor .text-editor-top #button3 {
+      background-color: #4CAF50; }
+  #about-page .text-editor .text-editor-bottom {
+    background-color: #2D373D;
+    padding: 20px;
+    border-radius: 0 0 5px 5px;
+    color: white; }
+#about-page .hobbies {
+  width: 100%; }
+  #about-page .hobbies > div {
+    display: inline-block;
+    height: 250px;
+    width: 250px;
+    margin: 25px;
+    padding: 15px;
+    overflow: hidden; }
+  #about-page .hobbies i {
+    font-size: 3em;
+    margin-bottom: 20px; }
 
 #skills-page {
   min-height: 100vh; }

@@ -1,3 +1,67 @@
 #about-page{
-	min-height: 100vh;
+	.text-editor{
+		width: 500px;
+		margin: 100px auto;
+		box-shadow:3px 3px 10px rgba(0,0,0,0.5);
+		-webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.5);
+		-moz-box-shadow:3px 3px 10px rgba(0,0,0,0.5);
+
+		.text-editor-top{
+			position: relative;
+			background-color: #CCC;
+			padding: 5px;
+			border-radius: 5px 5px 0 0;
+
+			.buttons{
+				position: absolute;
+				top: 10px;
+				left: 5px;
+			}
+			#button1, #button2, #button3{
+				display: inline-block;
+				width: 15px;
+				height: 15px;
+				-moz-border-radius: 50%;
+			    -webkit-border-radius: 50%;
+			    border-radius: 50%;
+			    float: left;
+			    margin: auto 3px;
+			    vertical-align: middle;
+			}
+			#button1{
+				background-color:#E53935;
+			}
+			#button2{
+				background-color:#FF8F00;
+			}
+			#button3{
+				background-color:#4CAF50;
+			}
+		}
+
+		.text-editor-bottom{
+			background-color: #2D373D;
+			padding: 20px;
+			border-radius: 0 0 5px 5px;
+			color: white;
+		}
+	}
+
+	.hobbies{
+		width: 100%;
+
+		& > div {
+			display: inline-block;
+			height: 250px;
+			width: 250px;
+			margin: 25px;
+			padding: 15px;
+			overflow: hidden;
+		}
+
+		i {
+			font-size: 3em;
+			margin-bottom: 20px;
+		}
+	}
 }
