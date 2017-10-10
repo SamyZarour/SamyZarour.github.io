@@ -153,7 +153,8 @@ hr.divider-line {
     border-radius: 0 0 5px 5px;
     color: white; }
 #about-page .hobbies {
-  width: 100%; }
+  width: 100%;
+  padding-top: 50px; }
   #about-page .hobbies > div {
     display: inline-block;
     height: 250px;
@@ -170,6 +171,15 @@ hr.divider-line {
 
 #projects-page {
   min-height: 100vh; }
+  #projects-page .projects {
+    margin-top: 100px; }
+    #projects-page .projects > div {
+      margin: 25px;
+      pading: 15px;
+      height: 300px;
+      width: 300px;
+      display: inline-block;
+      background-color: green; }
 
 #timeline-page {
   min-height: 100vh; }
