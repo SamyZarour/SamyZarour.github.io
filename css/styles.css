@@ -276,6 +276,137 @@ hr.divider-line {
 
 #timeline-page {
   min-height: 100vh; }
+  #timeline-page .timeline {
+    margin-top: 100px;
+    list-style: none;
+    padding: 0;
+    position: relative; }
+  #timeline-page .timeline:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: "";
+    width: 6px;
+    background-color: #f1f1f1;
+    left: 40px;
+    margin-left: -1.5px; }
+  #timeline-page .timeline > li {
+    margin-bottom: 50px;
+    position: relative;
+    min-height: 50px; }
+  #timeline-page .timeline > li:before,
+  #timeline-page .timeline > li:after {
+    content: " ";
+    display: table; }
+  #timeline-page .timeline > li:after {
+    clear: both; }
+  #timeline-page .timeline > li .timeline-panel {
+    width: 100%;
+    float: right;
+    padding: 0 20px 0 100px;
+    position: relative;
+    text-align: left; }
+  #timeline-page .timeline > li .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto; }
+  #timeline-page .timeline > li .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto; }
+  #timeline-page .timeline > li .timeline-image {
+    left: 0;
+    margin-left: 0;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 100;
+    background-color: #f1f1f1;
+    color: white;
+    border-radius: 100%;
+    text-align: center; }
+  #timeline-page .timeline > li .timeline-image h4 {
+    font-size: 10px;
+    margin-top: 12px;
+    line-height: 14px; }
+  #timeline-page .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+    text-align: left;
+    padding: 0 20px 0 100px; }
+  #timeline-page .timeline > li.timeline-inverted > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto; }
+  #timeline-page .timeline > li.timeline-inverted > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto; }
+  #timeline-page .timeline > li:last-child {
+    margin-bottom: 0; }
+  #timeline-page .timeline .timeline-heading h4 {
+    margin-top: 0;
+    color: inherit; }
+  #timeline-page .timeline .timeline-heading h4.subheading {
+    text-transform: none; }
+  #timeline-page .timeline .timeline-body > p,
+  #timeline-page .timeline .timeline-body > ul {
+    margin-bottom: 0; }
+  @media (min-width: 768px) {
+    #timeline-page .timeline:before {
+      left: 50%; }
+    #timeline-page .timeline > li {
+      margin-bottom: 100px;
+      min-height: 100px; }
+    #timeline-page .timeline > li .timeline-panel {
+      width: 41%;
+      float: left;
+      padding: 0 20px 20px 30px;
+      text-align: right; }
+    #timeline-page .timeline > li .timeline-image {
+      width: 100px;
+      height: 100px;
+      left: 50%;
+      margin-left: -50px; }
+    #timeline-page .timeline > li .timeline-image h4 {
+      font-size: 13px;
+      margin-top: 16px;
+      line-height: 18px; }
+    #timeline-page .timeline > li.timeline-inverted > .timeline-panel {
+      float: right;
+      text-align: left;
+      padding: 0 30px 20px 20px; } }
+  @media (min-width: 992px) {
+    #timeline-page .timeline > li {
+      min-height: 150px; }
+    #timeline-page .timeline > li .timeline-panel {
+      padding: 0 20px 20px; }
+    #timeline-page .timeline > li .timeline-image {
+      width: 150px;
+      height: 150px;
+      margin-left: -75px; }
+    #timeline-page .timeline > li .timeline-image h4 {
+      font-size: 18px;
+      margin-top: 30px;
+      line-height: 26px; }
+    #timeline-page .timeline > li.timeline-inverted > .timeline-panel {
+      padding: 0 20px 20px; } }
+  @media (min-width: 1200px) {
+    #timeline-page .timeline > li {
+      min-height: 170px; }
+    #timeline-page .timeline > li .timeline-panel {
+      padding: 0 20px 20px 100px; }
+    #timeline-page .timeline > li .timeline-image {
+      width: 170px;
+      height: 170px;
+      margin-left: -85px; }
+    #timeline-page .timeline > li .timeline-image h4 {
+      margin-top: 40px; }
+    #timeline-page .timeline > li.timeline-inverted > .timeline-panel {
+      padding: 0 100px 20px 20px; } }
 
 #contact-page {
   min-height: 100vh; }
