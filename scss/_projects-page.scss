@@ -1,3 +1,16 @@
 #projects-page{
 	min-height: 100vh;
+
+	.projects{
+		margin-top: 100px;
+
+		& > div{
+			margin: 25px;
+			pading: 15px;
+			height: 300px;
+			width: 300px;
+			display: inline-block;
+			background-color: green;
+		}
+	}
 }
