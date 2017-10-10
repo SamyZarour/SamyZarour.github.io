@@ -48,6 +48,8 @@ module.exports = function(grunt) {
                 src: ['gruntfile.js', 'js/*.js' , '!node_modules/**/*.js', '!js/*.min.js'],
                 options: {
                     node: true,
+                    jquery: true,
+                    browser : true,
                     strict: 'implied',
                     esversion: 6
                 }

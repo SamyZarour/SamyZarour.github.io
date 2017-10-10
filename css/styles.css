@@ -41,7 +41,8 @@ hr.divider-line {
     letter-spacing: 1px; }
     #mainNav .navbar-nav li.nav-item a.nav-link {
       padding: 20px;
-      color: white; }
+      color: white;
+      transition: 0.5s ease-out; }
       #mainNav .navbar-nav li.nav-item a.nav-link:hover {
         background-color: #18BC9C;
         outline: none; }
@@ -173,13 +174,105 @@ hr.divider-line {
   min-height: 100vh; }
   #projects-page .projects {
     margin-top: 100px; }
-    #projects-page .projects > div {
+    #projects-page .projects.showing > .project {
+      cursor: pointer;
+      opacity: 0.6;
+      transform: scale(0.88);
+      z-index: -10;
+      position: relative; }
+    #projects-page .projects .project {
       margin: 25px;
       pading: 15px;
       height: 300px;
       width: 300px;
       display: inline-block;
-      background-color: green; }
+      text-align: left;
+      box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+      -moz-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s 0s ease-in; }
+    #projects-page .projects .project-img {
+      height: 220px;
+      background: #DDD; }
+    #projects-page .projects .project-title {
+      position: relative;
+      background-color: #ffffff;
+      height: 80px;
+      overflow: hidden;
+      padding: 10px 15px; }
+      #projects-page .projects .project-title .toggle-info {
+        background: #18BC9C;
+        box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
+        color: #ffffff;
+        border-radius: 32px;
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        right: 15px;
+        top: 10px; }
+        #projects-page .projects .project-title .toggle-info span {
+          background: #ffffff;
+          height: 2px;
+          position: absolute;
+          top: 16px;
+          transition: all 0.15s 0s ease-out;
+          width: 12px; }
+        #projects-page .projects .project-title .toggle-info span.line-left {
+          right: 14px;
+          transform: rotate(45deg); }
+        #projects-page .projects .project-title .toggle-info span.line-right {
+          left: 14px;
+          transform: rotate(-45deg); }
+      #projects-page .projects .project-title h2 {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+        margin: 0;
+        padding: 0; }
+        #projects-page .projects .project-title h2 small {
+          display: block;
+          font-size: 18px;
+          font-weight: 600;
+          letter-spacing: -0.025em; }
+    #projects-page .projects div.project-description {
+      position: relative;
+      font-size: 14px; }
+      #projects-page .projects div.project-description .flap {
+        background: #d9d9d9;
+        position: absolute;
+        width: 100%;
+        transform-origin: top;
+        transform: rotateX(-90deg);
+        box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+        -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5); }
+      #projects-page .projects div.project-description .flap-description {
+        padding: 0 15px; }
+      #projects-page .projects div.project-description .flap1 {
+        transition: all 0.3s 0.3s ease-out;
+        z-index: -1; }
+      #projects-page .projects div.project-description .flap2 {
+        transition: all 0.3s 0s ease-out;
+        z-index: -2;
+        padding-bottom: 15px; }
+    #projects-page .projects .project.show {
+      opacity: 1 !important;
+      transform: scale(1) !important; }
+      #projects-page .projects .project.show .project-title a.toggle-info {
+        background: #ff6666 !important; }
+        #projects-page .projects .project.show .project-title a.toggle-info span {
+          top: 15px; }
+        #projects-page .projects .project.show .project-title a.toggle-info span.line-left {
+          right: 9px; }
+        #projects-page .projects .project.show .project-title a.toggle-info span.line-right {
+          left: 9px; }
+      #projects-page .projects .project.show .flap {
+        background: #ffffff;
+        transform: rotateX(0deg); }
+      #projects-page .projects .project.show .flap1 {
+        transition: all 0.3s 0s ease-out; }
+      #projects-page .projects .project.show .flap2 {
+        transition: all 0.3s 0.2s ease-out; }
 
 #timeline-page {
   min-height: 100vh; }
