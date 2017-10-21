@@ -1,3 +1,40 @@
 #contact-page{
-	min-height: 100vh;
+	min-height: 0;
+	margin-top: 100px;
+	padding-bottom: 50px;
+
+	overflow: hidden;
+	background-color: $theme-primary;
+	color: white;
+
+	.section-title{
+		font-size: 5em;
+	}
+
+	.section-secondary-text{
+		font-size: 1.5em;
+		font-style: italic;
+		padding: 0 25px;
+	}
+
+	.contact-button{
+		display: inline-block;
+		margin: 50px 0 25px 0;
+		color: $theme-primary;
+		font-size: 1.5em;
+		font-weight: 400;
+		padding: 15px;
+		background-color: $theme-success;
+		border: 2px solid $theme-success;
+		cursor: pointer;
+	}
+
+	.contact-button:hover{
+		background-color: $theme-primary;
+		color: $theme-success;
+	}
+
+	.bounceInDown{
+		z-index: 3;
+	}
 }
