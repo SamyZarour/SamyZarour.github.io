@@ -40,4 +40,30 @@ $(document).ready(function(){
     }
 
   });
+
+  $(window).on('scroll', function(event){
+   var scrollPos = $(document).scrollTop();
+   $(".navbar li a").each(function () {
+     var currLink = $(this);
+     var refElement = $(currLink.attr("href"));
+     if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+       currLink.addClass("active").parent().siblings().find('a').removeClass("active");
+     }
+     else if(refElement.attr('id') != 'contact-page'){
+       currLink.removeClass("active");
+       if(refElement.attr('id') == 'timeline-page' && refElement.position().top + refElement.height() <= scrollPos + $(window).height()){
+        console.log("Reached");
+        $('a[href="#contact-page"]').addClass("active").parent().siblings().find('a').removeClass("active");
+       }
+     }
+   });
+ });
+
+  $('nav').find('a').click(function(env){
+    env.preventDefault();
+    var href = $(this).attr('href');
+    var anchor = $(href).offset().top;
+    $('html, body').animate({scrollTop: anchor}, 1000);
+    return false;
+  });
 });
