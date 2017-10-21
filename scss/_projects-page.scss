@@ -11,7 +11,6 @@ $tealShade:	#007c85;
 $darkGrey: #4f585e;
 
 #projects-page{
-	min-height: 100vh;
 
 	.projects{
 		margin-top: 100px;
@@ -39,7 +38,7 @@ $darkGrey: #4f585e;
 
 		.project-img{
 			height: 220px;
-			background: #DDD;
+			background: $gray-base;
 		}
 
 		.project-title{
