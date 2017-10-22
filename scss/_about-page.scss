@@ -6,6 +6,10 @@
 		-webkit-box-shadow:3px 3px 10px rgba(0,0,0,0.5);
 		-moz-box-shadow:3px 3px 10px rgba(0,0,0,0.5);
 
+		@media screen and (max-width: $break-small) {
+			width: 250px;
+		}
+
 		.text-editor-top{
 			position: relative;
 			background-color: #CCC;
