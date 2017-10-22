@@ -259,7 +259,7 @@ hr.divider-line {
     #projects-page .projects .project {
       margin: 25px;
       pading: 15px;
-      height: 300px;
+      height: 320px;
       width: 300px;
       display: inline-block;
       text-align: left;
@@ -270,14 +270,41 @@ hr.divider-line {
     #projects-page .projects .project-img {
       height: 220px;
       background: #DDD; }
+    #projects-page .projects .project-blueprint {
+      background-image: url(../img/blueprint.png);
+      background-size: contain; }
+    #projects-page .projects .project-misn {
+      background-image: url(../img/misn.png);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    #projects-page .projects .project-immersed {
+      background-image: url(../img/immersed.png);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center; }
+    #projects-page .projects .project-quoteme,
+    #projects-page .projects .project-sorbere,
+    #projects-page .projects .project-susume {
+      background-image: url(../img/null.png);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center; }
     #projects-page .projects .project-title {
       position: relative;
       background-color: #ffffff;
-      height: 80px;
+      height: 100px;
       overflow: hidden;
       padding: 10px 15px; }
       #projects-page .projects .project-title small {
         padding-top: 5px; }
+      #projects-page .projects .project-title .used-technologies {
+        height: 30px; }
+        #projects-page .projects .project-title .used-technologies > * {
+          width: 30px;
+          height: 30px;
+          display: inline-block;
+          padding: 5px; }
       #projects-page .projects .project-title .toggle-info {
         background: #18BC9C;
         box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
