@@ -59,11 +59,14 @@ $(document).ready(function(){
    });
  });
 
-  $('nav').find('a').click(function(env){
+  $('nav').find('a').click(slowScroll);
+  $('#point-down').click(slowScroll)
+});
+
+var slowScroll = function(env){
     env.preventDefault();
     var href = $(this).attr('href');
     var anchor = $(href).offset().top;
     $('html, body').animate({scrollTop: anchor}, 1000);
     return false;
-  });
-});
+  };
