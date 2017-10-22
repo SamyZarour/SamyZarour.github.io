@@ -5,7 +5,8 @@
 		position: absolute;
 		top: 50%;
 		width: 100%;
-		transform: translate(0, -50%);
+		-webkit-transform: translate(0, -50%);
+		        transform: translate(0, -50%);
 		color: white;
 
 		.roles {
@@ -30,8 +31,12 @@
 			}
 			.btn:hover{
 				background-color: white;
+				-webkit-transition: -webkit-transform 0.4s ease-out;
+				transition: -webkit-transform 0.4s ease-out;
 				transition: transform 0.4s ease-out;
-			    transform: rotateZ(360deg);
+				transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+			    -webkit-transform: rotateZ(360deg);
+			            transform: rotateZ(360deg);
 			}
 			.btn:hover .fa-linkedin{
 				color: $linkedin-blue;
@@ -62,6 +67,7 @@
 	}
 
 	#point-down{
+		-webkit-transition: 0.4s ease-out;
 		transition: 0.4s ease-out;
 		position: absolute;
 		bottom: 0;
@@ -71,7 +77,8 @@
 		width: 100px;
 	    height: 100px;
 	    cursor: pointer;
-	    transform: translate(50%, 0);
+	    -webkit-transform: translate(50%, 0);
+	            transform: translate(50%, 0);
 
 	}
 

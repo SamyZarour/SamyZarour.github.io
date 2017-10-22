@@ -1,4 +1,4 @@
-// colour stuff
+/* colour stuff*/
 $white: #ffffff;
 $lightBG: #dce1df;
 $salmon: #ff6666;
@@ -20,7 +20,8 @@ $darkGrey: #4f585e;
 		&.showing > .project{
 			cursor: pointer;
 		    opacity: 0.6;
-		    transform: scale(0.88);
+		    -webkit-transform: scale(0.88);
+		            transform: scale(0.88);
 		    z-index: -10;
 		    position: relative;
 		}
@@ -29,12 +30,13 @@ $darkGrey: #4f585e;
 			margin: 25px;
 			pading: 15px;
 			height: 320px;
-			width: 300px;
+			width: 330px;
 			display: inline-block;
 			text-align: left;
 			box-shadow:3px 12px 20px rgba(0,0,0,0.5);
 			-webkit-box-shadow:3px 12px 20px rgba(0,0,0,0.5);
 			-moz-box-shadow:3px 12px 20px rgba(0,0,0,0.5);
+			-webkit-transition: all 0.3s 0s ease-in;
 			transition: all 0.3s 0s ease-in;
 		}
 
@@ -95,7 +97,8 @@ $darkGrey: #4f585e;
 
 			.toggle-info {
 				background: $theme-success;
-				box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+				-webkit-box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+				        box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
 				color: $white;
 				border-radius: 32px;
 				height: 32px;
@@ -109,17 +112,20 @@ $darkGrey: #4f585e;
 					height: 2px;
 					position: absolute;
 					top: 16px;
+					-webkit-transition: all 0.15s 0s ease-out;
 					transition: all 0.15s 0s ease-out;
 					width: 12px;
 				}
 
 				span.line-left {
 					right: 14px;
-					transform: rotate(45deg);
+					-webkit-transform: rotate(45deg);
+					        transform: rotate(45deg);
 				}
 				span.line-right {
 					left: 14px;
-					transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+					        transform: rotate(-45deg);
 				}
 		    }
 
@@ -147,8 +153,10 @@ $darkGrey: #4f585e;
 			    background: darken($white,15);
 			    position: absolute;
 			    width: 100%;
-			    transform-origin: top;
-			    transform: rotateX(-90deg);
+			    -webkit-transform-origin: top;
+			            transform-origin: top;
+			    -webkit-transform: rotateX(-90deg);
+			            transform: rotateX(-90deg);
 			    box-shadow:3px 12px 20px rgba(0,0,0,0.5);
 				-webkit-box-shadow:3px 12px 20px rgba(0,0,0,0.5);
 				-moz-box-shadow:3px 12px 20px rgba(0,0,0,0.5);
@@ -159,11 +167,13 @@ $darkGrey: #4f585e;
 			}
 
 			.flap1 {
+				-webkit-transition: all 0.3s 0.3s ease-out;
 				transition: all 0.3s 0.3s ease-out;
 				z-index: -1;
 			}
 
 			.flap2 {
+				-webkit-transition: all 0.3s 0s ease-out;
 				transition: all 0.3s 0s ease-out;
 				z-index: -2;
 				padding-bottom: 15px;
@@ -172,7 +182,8 @@ $darkGrey: #4f585e;
 
 		.project.show {
 		  opacity: 1 !important;
-		  transform: scale(1) !important;
+		  -webkit-transform: scale(1) !important;
+		          transform: scale(1) !important;
 
 		  .project-title {
 		    a.toggle-info {
@@ -191,14 +202,17 @@ $darkGrey: #4f585e;
 
 		  .flap{
 			background: $white;
-			transform: rotateX(0deg);
+			-webkit-transform: rotateX(0deg);
+			        transform: rotateX(0deg);
 		  }
 
 		  .flap1 {
+		    -webkit-transition: all 0.3s 0s ease-out;
 		    transition: all 0.3s 0s ease-out;
 		  }
 
 			.flap2 {
+				-webkit-transition: all 0.3s 0.2s ease-out;
 				transition: all 0.3s 0.2s ease-out;
 			}
 		}
