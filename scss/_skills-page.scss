@@ -58,7 +58,16 @@
 
 		.proficiency{
 			font-size: 1.5em;
-			padding: 15px;
+			padding: 15px 15px 0px 15px;
+		}
+
+		.divider-line-level{
+			max-width: 50px;
+			margin: 0 auto 15px;
+			padding: 0;
+			text-align: center;
+			border: none;
+			border-top: solid 1px;
 		}
 
 		.skill-item{
