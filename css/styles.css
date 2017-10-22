@@ -3,7 +3,8 @@
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Raleway', sans-serif; }
 
 .section-gray {
   background-color: #F5F5F5; }
@@ -119,7 +120,8 @@ hr.divider-line {
     #intro-page .content .cv-button {
       border: 2px solid #fff;
       font-size: 1.5em;
-      cursor: pointer; }
+      cursor: pointer;
+      color: white; }
       #intro-page .content .cv-button:hover {
         background-color: #fff;
         color: #2C3E50; }
@@ -285,7 +287,7 @@ hr.divider-line {
         width: 32px;
         position: absolute;
         right: 15px;
-        top: 10px; }
+        top: 5px; }
         #projects-page .projects .project-title .toggle-info span {
           background: #ffffff;
           height: 2px;
