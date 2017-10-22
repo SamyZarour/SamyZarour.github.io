@@ -116,6 +116,17 @@ hr.divider-line {
       #intro-page .content .cv-button:hover {
         background-color: #fff;
         color: #2C3E50; }
+  #intro-page #point-down {
+    transition: 0.4s ease-out;
+    position: absolute;
+    bottom: 30px;
+    right: 50%;
+    font-size: 3em;
+    color: white;
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    transform: translate(50%, 0); }
 
 #about-page .text-editor {
   width: 500px;

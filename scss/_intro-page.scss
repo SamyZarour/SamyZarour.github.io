@@ -57,5 +57,22 @@
 				color: $theme-primary;
 			}
 		}
+
 	}
+
+	#point-down{
+		transition: 0.4s ease-out;
+		position: absolute;
+		bottom: 30px;
+		right: 50%;
+		font-size: 3em;
+		color: white;
+		width: 100px;
+	    height: 100px;
+	    cursor: pointer;
+	    transform: translate(50%, 0);
+
+	}
+
+
 }
