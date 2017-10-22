@@ -1,3 +1,5 @@
+/* Variables*/
+/* Gray and Brand Colors for use across theme*/
 .navbar {
   padding: 0; }
 
@@ -34,6 +36,7 @@ hr.divider-line {
   font-style: italic;
   font-weight: 100; }
 
+/* Styling for the navbar*/
 #mainNav {
   font-weight: 300;
   text-transform: uppercase;
@@ -51,6 +54,7 @@ hr.divider-line {
     #mainNav .navbar-nav li.nav-item a.nav-link {
       padding: 20px;
       color: white;
+      -webkit-transition: 0.5s ease-out;
       transition: 0.5s ease-out; }
       #mainNav .navbar-nav li.nav-item a.nav-link:hover {
         background-color: #18BC9C;
@@ -72,12 +76,10 @@ hr.divider-line {
 @media (min-width: 992px) {
   #mainNav {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s; }
     #mainNav .navbar-brand {
       font-size: 2em;
       -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
       transition: all 0.3s; }
     #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
       color: white;
@@ -91,6 +93,7 @@ hr.divider-line {
     position: absolute;
     top: 50%;
     width: 100%;
+    -webkit-transform: translate(0, -50%);
     transform: translate(0, -50%);
     color: white; }
     #intro-page .content .roles {
@@ -109,7 +112,11 @@ hr.divider-line {
       margin: 30px 10px 20px 10px; }
     #intro-page .content .social-media .btn:hover {
       background-color: white;
+      -webkit-transition: -webkit-transform 0.4s ease-out;
+      transition: -webkit-transform 0.4s ease-out;
       transition: transform 0.4s ease-out;
+      transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+      -webkit-transform: rotateZ(360deg);
       transform: rotateZ(360deg); }
     #intro-page .content .social-media .btn:hover .fa-linkedin {
       color: #007BB5; }
@@ -126,6 +133,7 @@ hr.divider-line {
         background-color: #fff;
         color: #2C3E50; }
   #intro-page #point-down {
+    -webkit-transition: 0.4s ease-out;
     transition: 0.4s ease-out;
     position: absolute;
     bottom: 0;
@@ -135,6 +143,7 @@ hr.divider-line {
     width: 100px;
     height: 100px;
     cursor: pointer;
+    -webkit-transform: translate(50%, 0);
     transform: translate(50%, 0); }
 
 #about-page {
@@ -161,8 +170,6 @@ hr.divider-line {
         display: inline-block;
         width: 15px;
         height: 15px;
-        -moz-border-radius: 50%;
-        -webkit-border-radius: 50%;
         border-radius: 50%;
         float: left;
         margin: auto 3px;
@@ -192,7 +199,10 @@ hr.divider-line {
       margin-bottom: 20px; }
 
 #skills-page {
-  padding-bottom: 100px; }
+  padding-bottom: 100px;
+  /* .col{*/
+  /* 	border-right: 1px solid white;*/
+  /* }*/ }
   #skills-page .divider-line {
     margin-bottom: 100px; }
   #skills-page .languages-title {
@@ -225,6 +235,7 @@ hr.divider-line {
     padding: 25px;
     margin: 50px 0;
     background-color: #2c3e4f;
+    -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4);
     box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4); }
     #skills-page .languages .proficiency {
       font-size: 1.5em;
@@ -246,6 +257,7 @@ hr.divider-line {
     #skills-page .languages .skill-item > * {
       display: inline-block; }
 
+/* colour stuff*/
 #projects-page {
   padding-bottom: 100px; }
   #projects-page .projects {
@@ -253,6 +265,7 @@ hr.divider-line {
     #projects-page .projects.showing > .project {
       cursor: pointer;
       opacity: 0.6;
+      -webkit-transform: scale(0.88);
       transform: scale(0.88);
       z-index: -10;
       position: relative; }
@@ -260,12 +273,13 @@ hr.divider-line {
       margin: 25px;
       pading: 15px;
       height: 320px;
-      width: 300px;
+      width: 330px;
       display: inline-block;
       text-align: left;
       box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
       -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
       -moz-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+      -webkit-transition: all 0.3s 0s ease-in;
       transition: all 0.3s 0s ease-in; }
     #projects-page .projects .project-img {
       height: 220px;
@@ -307,6 +321,7 @@ hr.divider-line {
           padding: 5px; }
       #projects-page .projects .project-title .toggle-info {
         background: #18BC9C;
+        -webkit-box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
         box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);
         color: #ffffff;
         border-radius: 32px;
@@ -320,13 +335,16 @@ hr.divider-line {
           height: 2px;
           position: absolute;
           top: 16px;
+          -webkit-transition: all 0.15s 0s ease-out;
           transition: all 0.15s 0s ease-out;
           width: 12px; }
         #projects-page .projects .project-title .toggle-info span.line-left {
           right: 14px;
+          -webkit-transform: rotate(45deg);
           transform: rotate(45deg); }
         #projects-page .projects .project-title .toggle-info span.line-right {
           left: 14px;
+          -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg); }
       #projects-page .projects .project-title h2 {
         font-size: 24px;
@@ -346,7 +364,9 @@ hr.divider-line {
         background: #d9d9d9;
         position: absolute;
         width: 100%;
+        -webkit-transform-origin: top;
         transform-origin: top;
+        -webkit-transform: rotateX(-90deg);
         transform: rotateX(-90deg);
         box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
         -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
@@ -354,14 +374,17 @@ hr.divider-line {
       #projects-page .projects div.project-description .flap-description {
         padding: 0 15px; }
       #projects-page .projects div.project-description .flap1 {
+        -webkit-transition: all 0.3s 0.3s ease-out;
         transition: all 0.3s 0.3s ease-out;
         z-index: -1; }
       #projects-page .projects div.project-description .flap2 {
+        -webkit-transition: all 0.3s 0s ease-out;
         transition: all 0.3s 0s ease-out;
         z-index: -2;
         padding-bottom: 15px; }
     #projects-page .projects .project.show {
       opacity: 1 !important;
+      -webkit-transform: scale(1) !important;
       transform: scale(1) !important; }
       #projects-page .projects .project.show .project-title a.toggle-info {
         background: #ff6666 !important; }
@@ -373,10 +396,13 @@ hr.divider-line {
           left: 9px; }
       #projects-page .projects .project.show .flap {
         background: #ffffff;
+        -webkit-transform: rotateX(0deg);
         transform: rotateX(0deg); }
       #projects-page .projects .project.show .flap1 {
+        -webkit-transition: all 0.3s 0s ease-out;
         transition: all 0.3s 0s ease-out; }
       #projects-page .projects .project.show .flap2 {
+        -webkit-transition: all 0.3s 0.2s ease-out;
         transition: all 0.3s 0.2s ease-out; }
 
 #timeline-page {

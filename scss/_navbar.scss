@@ -1,4 +1,4 @@
-// Styling for the navbar
+/* Styling for the navbar*/
 
 #mainNav {
   font-weight: 300;
@@ -24,6 +24,7 @@
       a.nav-link {
         padding: 20px;
         color: white;
+        -webkit-transition: 0.5s ease-out;
         transition: 0.5s ease-out;
 
         &:hover {
@@ -55,12 +56,10 @@
 @media(min-width:992px) {
   #mainNav {
     -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
-    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
     .navbar-brand {
       font-size: 2em;
       -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
       transition: all 0.3s;
     }
     .navbar-nav > li.nav-item > a.nav-link.active {
