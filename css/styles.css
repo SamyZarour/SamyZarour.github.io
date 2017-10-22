@@ -104,6 +104,8 @@ hr.divider-line {
       color: #FFF;
       font-weight: bold; }
     #intro-page .content .social-media .btn {
+      -webkit-transition: 0.4s ease-out;
+      transition: 0.4s ease-out;
       border: 2px solid #fff;
       border-radius: 50%;
       padding: 20px;
@@ -112,10 +114,6 @@ hr.divider-line {
       margin: 30px 10px 20px 10px; }
     #intro-page .content .social-media .btn:hover {
       background-color: white;
-      -webkit-transition: -webkit-transform 0.4s ease-out;
-      transition: -webkit-transform 0.4s ease-out;
-      transition: transform 0.4s ease-out;
-      transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
       -webkit-transform: rotateZ(360deg);
       transform: rotateZ(360deg); }
     #intro-page .content .social-media .btn:hover .fa-linkedin {
@@ -125,6 +123,8 @@ hr.divider-line {
     #intro-page .content .social-media .btn:hover .fa-envelope {
       color: #DD4B39; }
     #intro-page .content .cv-button {
+      -webkit-transition: 0.4s ease-out;
+      transition: 0.4s ease-out;
       border: 2px solid #fff;
       font-size: 1.5em;
       cursor: pointer;
@@ -408,6 +408,8 @@ hr.divider-line {
 #timeline-page {
   padding-bottom: 100px; }
   #timeline-page .cv-button {
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
     border: 2px solid #2C3E50;
     color: #2C3E50;
     font-size: 1em;
@@ -565,18 +567,20 @@ hr.divider-line {
     font-style: italic;
     padding: 0 25px; }
   #contact-page .contact-button {
+    -webkit-transition: 0.4s ease-out;
+    transition: 0.4s ease-out;
     display: inline-block;
     margin: 50px 0 25px 0;
-    color: #2C3E50;
+    background-color: #2C3E50;
+    color: #18BC9C;
     font-size: 1.5em;
     font-weight: 400;
     padding: 15px;
-    background-color: #18BC9C;
     border: 2px solid #18BC9C;
     cursor: pointer; }
   #contact-page .contact-button:hover {
-    background-color: #2C3E50;
-    color: #18BC9C; }
+    color: #2C3E50;
+    background-color: #18BC9C; }
   #contact-page .bounceInDown {
     z-index: 3; }
 

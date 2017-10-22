@@ -16,20 +16,22 @@
 	}
 
 	.contact-button{
+		-webkit-transition: 0.4s ease-out;
+		transition: 0.4s ease-out;
 		display: inline-block;
 		margin: 50px 0 25px 0;
-		color: $theme-primary;
+		background-color: $theme-primary;
+		color: $theme-success;
 		font-size: 1.5em;
 		font-weight: 400;
 		padding: 15px;
-		background-color: $theme-success;
 		border: 2px solid $theme-success;
 		cursor: pointer;
 	}
 
 	.contact-button:hover{
-		background-color: $theme-primary;
-		color: $theme-success;
+		color: $theme-primary;
+		background-color: $theme-success;
 	}
 
 	.bounceInDown{

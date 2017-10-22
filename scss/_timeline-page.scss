@@ -3,7 +3,8 @@
 	padding-bottom: 100px;
 
 	.cv-button{
-
+		-webkit-transition: 0.4s ease-out;
+		transition: 0.4s ease-out;
 		border: 2px solid $theme-primary;
 		color: $theme-primary;
 		font-size: 1em;
