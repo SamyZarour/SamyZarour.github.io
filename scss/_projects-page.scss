@@ -28,7 +28,7 @@ $darkGrey: #4f585e;
 		.project{
 			margin: 25px;
 			pading: 15px;
-			height: 300px;
+			height: 320px;
 			width: 300px;
 			display: inline-block;
 			text-align: left;
@@ -43,15 +43,54 @@ $darkGrey: #4f585e;
 			background: $gray-base;
 		}
 
+		.project-blueprint{
+			background-image: url(../img/blueprint.png);
+			background-size: contain;
+		}
+
+		.project-misn{
+			background-image: url(../img/misn.png);
+			background-size: auto 100%;
+	        background-repeat: no-repeat;
+	        background-position: center;
+		}
+
+		.project-immersed{
+			background-image: url(../img/immersed.png);
+			background-size: auto 100%;
+	        background-repeat: no-repeat;
+	        background-position: center;
+		}
+
+		.project-quoteme,
+		.project-sorbere,
+		.project-susume{
+			background-image: url(../img/null.png);
+			background-size: auto 100%;
+	        background-repeat: no-repeat;
+	        background-position: center;
+		}
+
 		.project-title{
 			position: relative;
 			background-color: $white;
-			height: 80px;
+			height: 100px;
 			overflow: hidden;
 			padding: 10px 15px;
 
 			small{
 				padding-top: 5px;
+			}
+
+			.used-technologies{
+				height: 30px;
+
+				& > *{
+					width: 30px;
+					height: 30px;
+					display: inline-block;
+					padding: 5px;
+				}
 			}
 
 			.toggle-info {
