@@ -52,7 +52,6 @@ $(document).ready(function(){
      else if(refElement.attr('id') != 'contact-page'){
        currLink.removeClass("active");
        if(refElement.attr('id') == 'timeline-page' && refElement.position().top + refElement.height() <= scrollPos + $(window).height()){
-        console.log("Reached");
         $('a[href="#contact-page"]').addClass("active").parent().siblings().find('a').removeClass("active");
        }
      }
