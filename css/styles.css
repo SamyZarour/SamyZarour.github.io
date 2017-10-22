@@ -1,6 +1,10 @@
 .navbar {
   padding: 0; }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; }
+
 .section {
   min-height: 100vh;
   width: 100%;
@@ -216,7 +220,14 @@ hr.divider-line {
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4); }
   #skills-page .languages .proficiency {
     font-size: 1.5em;
-    padding: 15px; }
+    padding: 15px 15px 0px 15px; }
+  #skills-page .languages .divider-line-level {
+    max-width: 50px;
+    margin: 0 auto 15px;
+    padding: 0;
+    text-align: center;
+    border: none;
+    border-top: solid 1px; }
   #skills-page .languages .skill-item {
     margin-top: 15px;
     text-align: left;
@@ -255,6 +266,8 @@ hr.divider-line {
     height: 80px;
     overflow: hidden;
     padding: 10px 15px; }
+    #projects-page .projects .project-title small {
+      padding-top: 5px; }
     #projects-page .projects .project-title .toggle-info {
       background: #18BC9C;
       box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.25);

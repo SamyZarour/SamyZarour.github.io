@@ -48,6 +48,10 @@ $darkGrey: #4f585e;
 			overflow: hidden;
 			padding: 10px 15px;
 
+			small{
+				padding-top: 5px;
+			}
+
 			.toggle-info {
 				background: $theme-success;
 				box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
