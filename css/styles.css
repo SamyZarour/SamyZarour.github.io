@@ -30,11 +30,18 @@ hr.divider-line {
   font-weight: 300;
   letter-spacing: 3px;
   text-transform: uppercase; }
+  @media screen and (max-width: 700px) {
+    .title {
+      font-size: 2em; } }
 
 .title-desc {
   font-size: 2em;
   font-style: italic;
-  font-weight: 100; }
+  font-weight: 100;
+  padding: 0 5px; }
+  @media screen and (max-width: 700px) {
+    .title-desc {
+      font-size: 1.5em; } }
 
 /* Styling for the navbar*/
 #mainNav {
@@ -99,6 +106,9 @@ hr.divider-line {
     #intro-page .content .roles {
       font-size: 1.8em;
       font-weight: 100; }
+      @media screen and (max-width: 700px) {
+        #intro-page .content .roles {
+          font-size: 1.5em; } }
     #intro-page .content .social-media .fa {
       font-size: 2em;
       color: #FFF;
@@ -252,7 +262,7 @@ hr.divider-line {
       text-align: left;
       padding: 15px; }
     #skills-page .languages .skill-img {
-      width: 50xp;
+      width: 50px;
       height: 50px; }
     #skills-page .languages .skill-item > * {
       display: inline-block; }
@@ -271,7 +281,6 @@ hr.divider-line {
       position: relative; }
     #projects-page .projects .project {
       margin: 25px;
-      pading: 15px;
       height: 320px;
       width: 330px;
       display: inline-block;
@@ -281,6 +290,10 @@ hr.divider-line {
       -moz-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
       -webkit-transition: all 0.3s 0s ease-in;
       transition: all 0.3s 0s ease-in; }
+      @media screen and (max-width: 700px) {
+        #projects-page .projects .project {
+          margin: 15px;
+          width: 300px; } }
     #projects-page .projects .project-img {
       height: 220px;
       background: #DDD; }
@@ -562,6 +575,9 @@ hr.divider-line {
   color: white; }
   #contact-page .section-title {
     font-size: 5em; }
+    @media screen and (max-width: 700px) {
+      #contact-page .section-title {
+        font-size: 3.3em; } }
   #contact-page .section-secondary-text {
     font-size: 1.5em;
     font-style: italic;
