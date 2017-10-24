@@ -12,6 +12,10 @@
 		.roles {
 			font-size: 1.8em;
 			font-weight: 100;
+
+			@media screen and (max-width: $break-small) {
+				font-size: 1.5em;
+			}
 		}
 
 		.social-media{

@@ -28,7 +28,6 @@ $darkGrey: #4f585e;
 
 		.project{
 			margin: 25px;
-			pading: 15px;
 			height: 320px;
 			width: 330px;
 			display: inline-block;
@@ -38,6 +37,11 @@ $darkGrey: #4f585e;
 			-moz-box-shadow:3px 12px 20px rgba(0,0,0,0.5);
 			-webkit-transition: all 0.3s 0s ease-in;
 			transition: all 0.3s 0s ease-in;
+
+			@media screen and (max-width: $break-small) {
+				margin: 15px;
+				width: 300px;
+			}
 		}
 
 		.project-img{

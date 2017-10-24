@@ -7,6 +7,9 @@
 
 	.section-title{
 		font-size: 5em;
+		@media screen and (max-width: $break-small) {
+			font-size: 3.3em;
+		}
 	}
 
 	.section-secondary-text{
