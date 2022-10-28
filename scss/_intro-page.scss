@@ -37,8 +37,6 @@
 			}
 			.btn:hover{
 				background-color: white;
-			    -webkit-transform: rotateZ(360deg);
-			            transform: rotateZ(360deg);
 			}
 			.btn:hover .fa-linkedin{
 				color: $linkedin-blue;
@@ -56,14 +54,14 @@
 		.cv-button{
 			-webkit-transition: 0.4s ease-out;
 			transition: 0.4s ease-out;
-			border: 2px solid #fff;
+			border: 2px solid $theme-success;
 			font-size: 1.5em;
 			cursor: pointer;
-			color: white;
+			color: $theme-success;
 
 			&:hover{
-				background-color: #fff;
-				color: $theme-primary;
+				background-color: $theme-success;
+				color: white;
 			}
 		}
 
