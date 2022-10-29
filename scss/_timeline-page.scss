@@ -5,13 +5,14 @@
 	.cv-button{
 		-webkit-transition: 0.4s ease-out;
 		transition: 0.4s ease-out;
-		border: 2px solid $theme-primary;
-		color: $theme-primary;
-		font-size: 1em;
+		border: 2px solid $theme-success;
+		color: $theme-success;
+		font-weight: bold;
 		cursor: pointer;
+		border-radius: 0;
 
 		&:hover{
-			background-color: $theme-primary;
+			background-color: $theme-success;
 			color: #fff;
 		}
 	}
@@ -71,7 +72,8 @@
 	  height: 80px;
 	  position: absolute;
 	  z-index: 100;
-	  background-color: $theme-primary;
+	  border: 5px solid $theme-primary;
+	  background-color: white;
 	  color: white;
 	  border-radius: 100%;
 	  text-align: center;
@@ -80,6 +82,11 @@
 	.timeline > li .timeline-image > img{
 		width: 100%;
 		height: 100%;
+		padding: 25px;
+
+		@media (max-width: 992px) {
+			padding: 10px;
+		}
 	}
 
 	.timeline > li .timeline-image h4 {
@@ -107,6 +114,10 @@
 	.timeline > li:last-child {
 	  margin-bottom: 0;
 	}
+	.timeline .timeline-heading {
+		padding-bottom: 25px;
+	}
+
 	.timeline .timeline-heading h4 {
 	  margin-top: 0;
 	  color: inherit;

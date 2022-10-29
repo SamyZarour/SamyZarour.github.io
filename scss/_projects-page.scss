@@ -28,8 +28,8 @@ $darkGrey: #4f585e;
 
 		.project{
 			margin: 25px;
-			height: 320px;
-			width: 330px;
+			height: 400px;
+			width: 300px;
 			display: inline-block;
 			text-align: left;
 			box-shadow:3px 12px 20px rgba(0,0,0,0.5);
@@ -39,19 +39,47 @@ $darkGrey: #4f585e;
 			transition: all 0.3s 0s ease-in;
 
 			@media screen and (max-width: $break-small) {
-				margin: 15px;
 				width: 300px;
 			}
 		}
 
 		.project-img{
-			height: 220px;
-			background: $gray-base;
+			height: 300px;
 		}
 
 		.project-blueprint{
 			background-image: url(../img/blueprint.png);
 			background-size: contain;
+		}
+
+		.project-tagit{
+			background-image: url(../img/tagit.png);
+			background-size: contain;
+	        background-repeat: no-repeat;
+		}
+
+		.project-quoteme {
+			background-image: url(../img/quoteme.png);
+			background-size: contain;
+	        background-repeat: no-repeat;
+		}
+
+		.project-osusume{
+			background-image: url(../img/osusume.png);
+			background-size: contain;
+	        background-repeat: no-repeat;
+		}
+
+		.project-gymstreak{
+			background-image: url(../img/gymstreak.png);
+			background-size: contain;
+	        background-repeat: no-repeat;
+		}
+
+		.project-twinread{
+			background-image: url(../img/twinread.png);
+			background-size: contain;
+	        background-repeat: no-repeat;
 		}
 
 		.project-misn{
@@ -68,13 +96,10 @@ $darkGrey: #4f585e;
 	        background-position: center;
 		}
 
-		.project-quoteme,
-		.project-sorbere,
-		.project-susume{
-			background-image: url(../img/null.png);
-			background-size: auto 100%;
+		.project-sorbere{
+			background-image: url(../img/sorbere.png);
+			background-size: contain;
 	        background-repeat: no-repeat;
-	        background-position: center;
 		}
 
 		.project-title{
@@ -101,8 +126,8 @@ $darkGrey: #4f585e;
 
 			.toggle-info {
 				background: $theme-success;
-				-webkit-box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
-				        box-shadow: 0 2px 0px 0 rgba(0,0,0,0.25);
+				-webkit-box-shadow: 0 1px 0px 0 rgba(0,0,0,0.25);
+				        box-shadow: 0 1px 0px 0 rgba(0,0,0,0.25);
 				color: $white;
 				border-radius: 32px;
 				height: 32px;
