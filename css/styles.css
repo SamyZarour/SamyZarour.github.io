@@ -651,6 +651,7 @@ hr.divider-line {
 }
 #timeline-page .timeline > li:last-child {
   margin-bottom: 0;
+  background-color: white;
 }
 #timeline-page .timeline .timeline-heading {
   padding-bottom: 25px;
