@@ -59,7 +59,7 @@ $(document).ready(function(){
  });
 
   $('nav').find('a').click(slowScroll);
-  $('#point-down').click(slowScroll)
+  $('#point-down').click(slowScroll);
 });
 
 var slowScroll = function(env){

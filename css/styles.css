@@ -10,6 +10,10 @@ html, body {
   font-family: "Raleway", sans-serif;
 }
 
+b {
+  font-weight: 600;
+}
+
 .section-gray {
   min-height: 100vh;
   width: 100%;
@@ -40,7 +44,7 @@ hr.divider-line {
   letter-spacing: 3px;
   text-transform: uppercase;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .title {
     font-size: 2em;
   }
@@ -52,7 +56,7 @@ hr.divider-line {
   font-weight: 100;
   padding: 0 5px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .title-desc {
     font-size: 1.5em;
   }
@@ -81,6 +85,7 @@ hr.divider-line {
 #mainNav .navbar-nav li.nav-item a.nav-link {
   padding: 20px;
   color: white;
+  -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
@@ -106,10 +111,12 @@ hr.divider-line {
 
 @media (min-width: 992px) {
   #mainNav {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
     transition: padding-top 0.3s, padding-bottom 0.3s;
   }
   #mainNav .navbar-brand {
     font-size: 2em;
+    -webkit-transition: all 0.3s;
     transition: all 0.3s;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
@@ -128,6 +135,7 @@ hr.divider-line {
   position: absolute;
   top: 50%;
   width: 100%;
+  -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   color: white;
 }
@@ -135,7 +143,7 @@ hr.divider-line {
   font-size: 1.8em;
   font-weight: 100;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   #intro-page .content .roles {
     font-size: 1.5em;
   }
@@ -143,9 +151,10 @@ hr.divider-line {
 #intro-page .content .social-media .fa {
   font-size: 2em;
   color: #FFF;
-  font-weight: bold;
+  font-weight: 600;
 }
 #intro-page .content .social-media .btn {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -167,6 +176,7 @@ hr.divider-line {
   color: #DD4B39;
 }
 #intro-page .content .cv-button {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   border: 2px solid #18BC9C;
   font-size: 1.5em;
@@ -178,6 +188,7 @@ hr.divider-line {
   color: white;
 }
 #intro-page #point-down {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   position: absolute;
   bottom: 0;
@@ -187,6 +198,7 @@ hr.divider-line {
   width: 100px;
   height: 100px;
   cursor: pointer;
+  -webkit-transform: translate(50%, 30%);
   transform: translate(50%, 30%);
 }
 
@@ -196,16 +208,19 @@ hr.divider-line {
 }
 #about-page .about-header {
   font-size: 1.5em;
-  font-weight: bold;
+  font-weight: 600;
   letter-spacing: 2px;
   width: 75%;
   max-width: 600px;
   margin: 15px auto;
 }
-@media screen and (max-width: 700px) {
-  #about-page .about-header {
-    font-size: 1em;
-  }
+#about-page .about-description {
+  width: 75%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+#about-page .about-description > div {
+  padding-top: 15px;
 }
 #about-page .about-avatar {
   width: 75%;
@@ -247,7 +262,7 @@ hr.divider-line {
   padding-top: 25px;
 }
 #about-page .about-steps .about-step > h3 {
-  font-weight: bold;
+  font-weight: 600;
 }
 #about-page .about-steps hr {
   border-top: 0;
@@ -256,6 +271,7 @@ hr.divider-line {
   max-width: 150px;
 }
 #about-page .contact-button {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   display: inline-block;
   margin: 0 0 25px 0;
@@ -322,6 +338,7 @@ hr.divider-line {
   padding: 25px;
   margin: 50px 0;
   background-color: rgb(44, 62, 79);
+  -webkit-box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4);
   box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.4);
 }
 #skills-page .languages .proficiency {
@@ -359,6 +376,7 @@ hr.divider-line {
 #projects-page .projects.showing > .project {
   cursor: pointer;
   opacity: 0.6;
+  -webkit-transform: scale(0.88);
   transform: scale(0.88);
   z-index: -10;
   position: relative;
@@ -372,9 +390,10 @@ hr.divider-line {
   box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.3s 0s ease-in;
   transition: all 0.3s 0s ease-in;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   #projects-page .projects .project {
     width: 300px;
   }
@@ -449,6 +468,7 @@ hr.divider-line {
 }
 #projects-page .projects .project-title .toggle-info {
   background: #18BC9C;
+  -webkit-box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 0px 0 rgba(0, 0, 0, 0.25);
   color: #ffffff;
   border-radius: 32px;
@@ -463,20 +483,23 @@ hr.divider-line {
   height: 2px;
   position: absolute;
   top: 16px;
+  -webkit-transition: all 0.15s 0s ease-out;
   transition: all 0.15s 0s ease-out;
   width: 12px;
 }
 #projects-page .projects .project-title .toggle-info span.line-left {
   right: 14px;
+  -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
 #projects-page .projects .project-title .toggle-info span.line-right {
   left: 14px;
+  -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
 #projects-page .projects .project-title h2 {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.05em;
   margin: 0;
   padding: 0;
@@ -495,7 +518,9 @@ hr.divider-line {
   background: #d9d9d9;
   position: absolute;
   width: 100%;
+  -webkit-transform-origin: top;
   transform-origin: top;
+  -webkit-transform: rotateX(-90deg);
   transform: rotateX(-90deg);
   box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 3px 12px 20px rgba(0, 0, 0, 0.5);
@@ -505,16 +530,19 @@ hr.divider-line {
   padding: 0 15px;
 }
 #projects-page .projects div.project-description .flap1 {
+  -webkit-transition: all 0.3s 0.3s ease-out;
   transition: all 0.3s 0.3s ease-out;
   z-index: -1;
 }
 #projects-page .projects div.project-description .flap2 {
+  -webkit-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
   z-index: -2;
   padding-bottom: 15px;
 }
 #projects-page .projects .project.show {
   opacity: 1 !important;
+  -webkit-transform: scale(1) !important;
   transform: scale(1) !important;
 }
 #projects-page .projects .project.show .project-title a.toggle-info {
@@ -531,12 +559,15 @@ hr.divider-line {
 }
 #projects-page .projects .project.show .flap {
   background: #ffffff;
+  -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 #projects-page .projects .project.show .flap1 {
+  -webkit-transition: all 0.3s 0s ease-out;
   transition: all 0.3s 0s ease-out;
 }
 #projects-page .projects .project.show .flap2 {
+  -webkit-transition: all 0.3s 0.2s ease-out;
   transition: all 0.3s 0.2s ease-out;
 }
 
@@ -544,10 +575,11 @@ hr.divider-line {
   padding-bottom: 100px;
 }
 #timeline-page .cv-button {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   border: 2px solid #18BC9C;
   color: #18BC9C;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   border-radius: 0;
 }
@@ -750,7 +782,7 @@ hr.divider-line {
 #contact-page .section-title {
   font-size: 5em;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   #contact-page .section-title {
     font-size: 3.3em;
   }
@@ -761,6 +793,7 @@ hr.divider-line {
   padding: 0 25px;
 }
 #contact-page .contact-button {
+  -webkit-transition: 0.4s ease-out;
   transition: 0.4s ease-out;
   display: inline-block;
   margin: 50px 0 25px 0;
@@ -778,4 +811,4 @@ hr.divider-line {
 }
 #contact-page .bounceInDown {
   z-index: 3;
-}/*# sourceMappingURL=styles.css.map */
+}
