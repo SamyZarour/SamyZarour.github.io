@@ -73,6 +73,9 @@ module.exports = function(grunt) {
         // compile less stylesheets to css -----------------------------------------
         sass: {
           dist: {
+            options: {
+              implementation: require('sass'),
+            },
             files: {
               'css/styles.css': 'scss/styles.scss'
             }
